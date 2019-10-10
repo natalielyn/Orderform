@@ -42,9 +42,7 @@ function addSelectedItemToCart() {
   // TODO: get the quantity
   var quantity = document.getElementById('quantity').value;
   // TODO: using those, add one item to the Cart
-  for (var i = 0; i < quantity; i++) {
-    cart.items.push(itemPicked)[i];
-  }
+  cart.addItem(itemPicked, quantity);
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart

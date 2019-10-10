@@ -68,7 +68,6 @@ function updateCartPreview() {
     li.textContent = `${itemPicked} x ${quantity}`
     ul.appendChild(li)
   }
-  
 }
 
 // Set up the "submit" event listener on the form.

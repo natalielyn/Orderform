@@ -43,7 +43,6 @@ function showCart() {
     productTd.textContent = cart.items[i].product;
     tr.appendChild(productTd);
     
-
     var amountTd = document.createElement('td');
     amountTd.textContent = cart.items[i].quantity;
     tr.appendChild(amountTd);
@@ -60,9 +59,13 @@ function showCart() {
 function removeItemFromCart(event) {
 
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
+  if (event.target.textContent === 'X') {
+    cart.removeItem(event.target.parentElement.id);
+  }
   // TODO: Save the cart back to local storage
+  localStorage.setItem('cart', JSON.stringify(cart.items));
   // TODO: Re-draw the cart table
-
+  renderCart();
 }
 
 // This will initialize the page and draw the cart on screen

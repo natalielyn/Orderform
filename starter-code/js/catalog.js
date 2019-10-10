@@ -42,12 +42,17 @@ function addSelectedItemToCart() {
   // TODO: get the quantity
   var quantity = document.getElementById('quantity').value;
   // TODO: using those, add one item to the Cart
-  cart.items.push(itemPicked, quantity)
-  console.log(cart);
+  for (var i = 0; i < quantity; i++) {
+    cart.items.push(itemPicked)[i];
+  }
+  console.log(cart)
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+function updateCounter() {
+  var counter = document.getElementById('itemCount');
+  
+};
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {

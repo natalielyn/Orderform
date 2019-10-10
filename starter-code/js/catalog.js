@@ -13,6 +13,7 @@ function populateForm() {
   var selectElement = document.getElementById('items');
   for (var i in Product.allProducts) {
     var option = document.createElement('option');
+    option.textContent = Product.allProducts[i].name;
     selectElement.appendChild(option);
   }
   return selectElement;
@@ -36,8 +37,13 @@ function handleSubmit(event) {
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
+  var e = document.getElementById('items');
+  var itemPicked = e.options[e.selectedIndex].value;
   // TODO: get the quantity
+  var quantity = document.getElementById('quantity').value;
   // TODO: using those, add one item to the Cart
+  cart.items.push(itemPicked, quantity)
+  console.log(cart);
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart

@@ -1,15 +1,25 @@
 /* TODO: Make it awesome */ 
-h1 {
-background-color: #F1F1F1;
+body {
+  width: 1000px;
+  align-content: center;
+  margin: auto;
+}
+
+header > h1 {
+background-color: #003d66;
 text-align: center;
 padding: 20px;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: monospace;
 font-size: 30px;
+}
+
+.class h1 {
+background-color: blanchedalmond;
 }
 
 nav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #007acc;
 }
 nav a {
 float: left;
@@ -25,16 +35,15 @@ nav a:hover {
   color: rgb(87, 87, 87);
 }
 
-#catalog {
-  background-color: #F1F1F1;
-  display: flex;
-  flex-direction: column;
+fieldset {
+  
+  background-color: #0099ff;
+  text-align: center;
+  box-shadow: 5px, 5px, black;
 }
 
-.card {
-  background-color: #F1F1F1;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+legend {
+  font-size: 20px;
 }
+
 
